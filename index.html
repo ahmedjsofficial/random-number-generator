@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Random Number Generator</title>
+</head>
+<body>
+
+	<h1>Random Number Generator from 1 - 100 and A Button which is display 20 odd and 20 even at same time!!</h1>
+	<button type="button" onclick="displayNumbers();">Generate Numbers</button>
+
+	<div id="result"></div>
+
+	<script type="text/javascript">
+		function generateRandomNumbers () {
+			document.write("<table>");
+			for(i=1;i<=50;i++){
+				if(i%2 == 0) {
+					document.write("<td>"+i+"</td></tr>");
+				}else{
+					document.write("<tr><td>"+i+"</td>");
+				}
+			}
+			document.write("</table>");			
+		}
+
+		function displayNumbers() {
+			const getResults = document.getElementById("result");
+			getResults.innerHTML = generateRandomNumbers();
+		}
+
+	</script>
+
+</body>
+</html>
